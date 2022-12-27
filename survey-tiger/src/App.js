@@ -1,7 +1,7 @@
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.css';
 import Logo from './logo.png';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import CreateSurvey from './components/CreateSurvey';
 import Published from './components/Published';
@@ -18,7 +18,7 @@ function App() {
       <div className="col-md-10 offset-md-1 col-12 text-center">
         <img className="col-md-6" alt="logo" src={Logo}/>
         <Router>
-          <Switch>
+          <Routes>
             <Route exact path="/">
               <Menu/>
             </Route>
@@ -28,7 +28,7 @@ function App() {
             <Route exact path="/publish">
               <Published surveyQuestions={surveyQuestions}/>
             </Route>
-          </Switch>
+          </Routes>
         </Router>
       </div>
     </>
